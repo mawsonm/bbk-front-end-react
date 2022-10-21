@@ -1,0 +1,68 @@
+.formGroup {
+  position: relative;
+  padding: 15px 0 0;
+  width: 50%;
+}
+
+.formGroup.invalid .formField {
+  border-bottom: 2px solid #ef4646;
+}
+
+.formGroup.invalid .formLabel {
+  color: #ef4646;
+}
+
+.formField {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #cfcfcf;
+  outline: 0;
+  font-size: 1rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+}
+
+.formField::placeholder {
+  color: transparent;
+}
+
+.formField:placeholder-shown ~ .formLabel {
+  font-size: 1rem;
+  cursor: text;
+  top: 20px;
+}
+
+.formLabel {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+.formField:focus {
+  padding-bottom: 6px;  
+  border-image: #37474f;
+  border-image-slice: 1;
+}
+
+.formField:focus ~ .formLabel {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #cfcfcf;   
+}
+
+.invalid .formField:focus ~ .formLabel {
+  color: #ef4646;   
+}
+/* reset input */
+.formField:required, .formField:invalid{
+ box-shadow:none; 
+}
